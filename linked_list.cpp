@@ -58,5 +58,13 @@ int main()
 		LL.set_value(num++);
 	}
 
+	linked_list<int>* ll_ptr {&linked_list_array[0]}; // pointer to linked list obj
+
+	for (const auto& LL : linked_list_array)
+	{
+		std::cout << ll_ptr -> value << " ";
+		ll_ptr = ll_ptr -> next;
+	}
+
 	return 0;
 }
